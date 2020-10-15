@@ -70,6 +70,7 @@
       <?php endif; ?>
       <p><?php the_field('featured_paragraph_#1') ?></p>
       <p><?php the_field('featured_paragraph_#2') ?></p>
+
     </div>
 
   </div>
