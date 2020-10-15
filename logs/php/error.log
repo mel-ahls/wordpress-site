@@ -1,0 +1,32 @@
+[08-Oct-2020 23:22:25 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-content/themes/starter-theme/about-us.php on line 10
+[09-Oct-2020 00:16:02 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php on line 89
+[09-Oct-2020 00:16:02 UTC] PHP Stack trace:
+[09-Oct-2020 00:16:02 UTC] PHP   1. {main}() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/index.php:0
+[09-Oct-2020 00:16:02 UTC] PHP   2. require() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/index.php:17
+[09-Oct-2020 00:16:02 UTC] PHP   3. require_once() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-blog-header.php:19
+[09-Oct-2020 00:16:02 UTC] PHP   4. include() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/template-loader.php:106
+[09-Oct-2020 00:16:02 UTC] PHP   5. the_field() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-content/themes/starter-theme/page-home.php:67
+[13-Oct-2020 00:35:33 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php on line 168
+[13-Oct-2020 00:35:33 UTC] PHP Stack trace:
+[13-Oct-2020 00:35:33 UTC] PHP   1. {main}() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:0
+[13-Oct-2020 00:35:33 UTC] PHP   2. do_action_ref_array() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:138
+[13-Oct-2020 00:35:33 UTC] PHP   3. WP_Hook->do_action() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/plugin.php:544
+[13-Oct-2020 00:35:33 UTC] PHP   4. WP_Hook->apply_filters() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:311
+[13-Oct-2020 00:35:33 UTC] PHP   5. wp_version_check() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:287
+[13-Oct-2020 00:35:33 UTC] PHP   6. trigger_error() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php:168
+[13-Oct-2020 00:35:33 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php on line 403
+[13-Oct-2020 00:35:33 UTC] PHP Stack trace:
+[13-Oct-2020 00:35:33 UTC] PHP   1. {main}() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:0
+[13-Oct-2020 00:35:33 UTC] PHP   2. do_action_ref_array() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:138
+[13-Oct-2020 00:35:33 UTC] PHP   3. WP_Hook->do_action() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/plugin.php:544
+[13-Oct-2020 00:35:33 UTC] PHP   4. WP_Hook->apply_filters() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:311
+[13-Oct-2020 00:35:33 UTC] PHP   5. wp_update_plugins() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:287
+[13-Oct-2020 00:35:33 UTC] PHP   6. trigger_error() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php:403
+[13-Oct-2020 00:35:33 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php on line 607
+[13-Oct-2020 00:35:33 UTC] PHP Stack trace:
+[13-Oct-2020 00:35:33 UTC] PHP   1. {main}() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:0
+[13-Oct-2020 00:35:33 UTC] PHP   2. do_action_ref_array() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-cron.php:138
+[13-Oct-2020 00:35:33 UTC] PHP   3. WP_Hook->do_action() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/plugin.php:544
+[13-Oct-2020 00:35:33 UTC] PHP   4. WP_Hook->apply_filters() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:311
+[13-Oct-2020 00:35:33 UTC] PHP   5. wp_update_themes() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/class-wp-hook.php:287
+[13-Oct-2020 00:35:33 UTC] PHP   6. trigger_error() /Users/melahlstrom/Documents/Juno/Wordpress & Shopify/Wordpress/firstsite/app/public/wp-includes/update.php:607

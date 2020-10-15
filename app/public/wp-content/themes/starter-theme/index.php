@@ -5,7 +5,12 @@
 
   <div class="content">
       <?php get_template_part( 'loop', 'index' );	?>
-  </div> <!--/.content -->
+  </div> /.content
+
+  <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+    <?php wp_dropdown_categories(); ?>
+    <input type="submit" name="submit" value="Go" />
+</form>
 
   <?php get_sidebar(); ?>
 
