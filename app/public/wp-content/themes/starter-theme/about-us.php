@@ -140,4 +140,16 @@
 <?php } ?>
 </section>
 
+<section>
+	<div class="get-in-touch">
+		<p><?php the_field('get_in_touch'); ?></p>
+		<?php
+			$link = get_field('get_in_touch_link');
+
+			if( $link ) { ?>
+				<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+      <?php } ?>
+	</div>
+</section>
+
 <?php get_footer(); ?>

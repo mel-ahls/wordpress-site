@@ -298,4 +298,3 @@ function register_our_blocks() {
   ));
 
 }
-
