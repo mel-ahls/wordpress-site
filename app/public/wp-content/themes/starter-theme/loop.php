@@ -2,6 +2,7 @@
 
 <?php if ( ! have_posts() ) : ?>
 
+	
 	<article id="post-0" class="post error404 not-found">
 		<h1 class="entry-title">Not Found</h1>
 		<section class="entry-content">
@@ -18,12 +19,11 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php the_post_thumbnail('rectangle'); ?>
-		<h2><?php the_title(); ?></h2>
-		<div class="date-time">
-			<h4><?php echo get_the_author();?> -</h4>
-			<h4><?php echo get_the_date(); ?></h4>
-		</div>
+		<div class="article-text">
+			<h3><?php the_title(); ?></h3>
+			<h4><?php echo get_the_author();?> - <?php echo get_the_date(); ?></h4>
 			<?php the_excerpt(); ?>
+		</div>
 	</article>
 
 <?php endwhile; // End the loop. ?>

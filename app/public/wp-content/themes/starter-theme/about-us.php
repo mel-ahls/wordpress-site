@@ -14,7 +14,7 @@
 
 <section class="background">
 	<div class="beginnings wrapper">
-		<div class="div">
+		<div class="beginnings-text">
 			<h2><?php the_field('beginnings_title') ?></h2>
 			<p><?php the_field('beginnings_paragraph_#1'); ?></p>
 			<p><?php the_field('beginnings_paragraph_#2'); ?></p>
@@ -29,16 +29,17 @@
 	</div>
 </section>
 
-<section class="background">
-	<div class="mission wrapper">
-		<h2><?php the_field('mission_title') ?></h2>
+<section class="background crop">
+	<div class="mission">
+		<h2><?php the_field('mission_title'); ?></h2>
 		<p><?php the_field('mission_paragraph_#1'); ?></p>
 		<p><?php the_field('mission_paragraph_#2'); ?></p>
 	</div> 
 </section>
 
-<section>
-
+<section class="teams wrapper">
+  
+    <h2><?php the_field('team_title'); ?></h2>    
 	<!-- Our query for team members -->
 	<?php
 	// leadership team query
@@ -57,24 +58,30 @@
 
 	// The Loop for leadership
 	if ( $leadership_query->have_posts() ) { ?>
-		<h2>Leadership</h2>
-		<?php while ( $leadership_query->have_posts() ) { 
-			$leadership_query->the_post(); ?>
-			<?php $job_title = get_field('job_title'); ?>
-			<div class="team-member">
-				<a href="<?php the_permalink(); ?>">
-					<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
-					<h2><?php the_title(); ?></h2>
-					<p><?php echo $job_title; ?></p>
-				</a>
-			</div>
-		<?php }
-			/* Restore original Post Data */
-			wp_reset_postdata();
-	} else { ?>
-			<!-- no posts found -->
-			<p>There are no leaders</p>
-	<?php }
+    <h3>Leadership</h3>
+    <div class="team-container">
+      <?php while ( $leadership_query->have_posts() ) { 
+        $leadership_query->the_post(); ?>
+        <?php $job_title = get_field('job_title'); ?>
+          <div class="team-member">
+            <a href="<?php the_permalink(); ?>">
+              <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
+              <h4><?php the_title(); ?></h4>
+              <p><?php echo $job_title; ?></p>
+            </a>
+          </div>
+          <?php }
+        /* Restore original Post Data */
+        wp_reset_postdata();
+      } else { ?>
+        <!-- no posts found -->
+        <p>There are no leaders</p>
+      <?php }
+
+      ?>
+    </div>
+
+  <?php
 	// developers team query
 	$developers_query = new WP_Query(
 		array(
@@ -90,14 +97,15 @@
 	);
 
 	// The Loop for developers team
-	if ( $developers_query->have_posts() ) { ?>
-		<h2>Development Team</h2>
+  if ( $developers_query->have_posts() ) { ?>
+  <!-- hello -->
+		<h3>Development Team</h3>
 		<?php while ( $developers_query->have_posts() ) { 
 			$developers_query->the_post(); ?>
 			<div class="team-member">
 				<a href="<?php the_permalink(); ?>">
 					<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
-					<h2><?php the_title(); ?></h2>
+					<h4><?php the_title(); ?></h4>
 				</a>
 			</div>
 		<?php }
@@ -122,13 +130,13 @@
 	);
 	// The Loop for design team
 	if ( $design_query->have_posts() ) { ?>
-			<h2>Design Team</h2>
+			<h3>Design Team</h3>
 			<?php while ( $design_query->have_posts() ) { 
 					$design_query->the_post(); ?>
 					<div class="team-member">
 							<a href="<?php the_permalink(); ?>">
 									<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
-									<h2><?php the_title(); ?></h2>
+									<h4><?php the_title(); ?></h4>
 							</a>
 					</div>
 			<?php }

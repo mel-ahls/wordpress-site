@@ -3,13 +3,26 @@
 
 <div class="wrapper">
 
+
+  <div class="blog-hero">
+    <h1><?php the_field('blog_page_title', 'option'); ?></h1>
+
+    <div class="hero-image">
+      <?php $image = get_field('blog_image', 'option');
+          if( $image ) {
+            echo wp_get_attachment_image( $image, 'large');
+        } ?>
+    </div>
+  </div>
+  
+
   <form action="<?php echo esc_url( home_url( '/' ) ); ?>"  method="get">
     <?php wp_dropdown_categories(); ?>
     <input type="submit" name="submit" value="Go" />
   </form>
-  
+
   <div class="content">
-       <?php get_template_part( 'loop', 'index' );	?>
+       <?php get_template_part( 'loop', 'index' ); ?>
   </div>
 
 </div> 
