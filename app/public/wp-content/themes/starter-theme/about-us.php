@@ -39,7 +39,8 @@
 
 <section class="teams wrapper">
   
-    <h2><?php the_field('team_title'); ?></h2>    
+  <h2><?php the_field('team_title'); ?></h2>
+    
 	<!-- Our query for team members -->
 	<?php
 	// leadership team query
@@ -76,13 +77,12 @@
       } else { ?>
         <!-- no posts found -->
         <p>There are no leaders</p>
-      <?php }
-
-      ?>
+      <?php } ?>
     </div>
+    
 
   <?php
-	// developers team query
+    // developers team query
 	$developers_query = new WP_Query(
 		array(
 			'post_type' => 'team_members',
@@ -98,23 +98,26 @@
 
 	// The Loop for developers team
   if ( $developers_query->have_posts() ) { ?>
-  <!-- hello -->
-		<h3>Development Team</h3>
-		<?php while ( $developers_query->have_posts() ) { 
-			$developers_query->the_post(); ?>
-			<div class="team-member">
-				<a href="<?php the_permalink(); ?>">
-					<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
-					<h4><?php the_title(); ?></h4>
-				</a>
-			</div>
-		<?php }
-		/* Restore original Post Data */
-		wp_reset_postdata();
-	} else { ?>
-			<!-- no posts found -->
-			<p>There are no developers</p>
-	<?php }
+    <h3>Development Team</h3>
+    <div class="team-container">
+      <?php while ( $developers_query->have_posts() ) { 
+        $developers_query->the_post(); ?>
+        <div class="team-member">
+          <a href="<?php the_permalink(); ?>">
+            <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', false, array('class' => 'featured-image')); ?>
+            <h4><?php the_title(); ?></h4>
+          </a>
+        </div>
+      <?php }
+      /* Restore original Post Data */
+        wp_reset_postdata();
+      } else { ?>
+          <!-- no posts found -->
+          <p>There are no developers</p>
+      <?php } ?>
+    </div>
+  
+  <?php
 	// design team query
 	$design_query = new WP_Query(
 			array(
@@ -130,8 +133,9 @@
 	);
 	// The Loop for design team
 	if ( $design_query->have_posts() ) { ?>
-			<h3>Design Team</h3>
-			<?php while ( $design_query->have_posts() ) { 
+      <h3>Design Team</h3>
+      <div class="team-container">
+			  <?php while ( $design_query->have_posts() ) { 
 					$design_query->the_post(); ?>
 					<div class="team-member">
 							<a href="<?php the_permalink(); ?>">
@@ -139,13 +143,14 @@
 									<h4><?php the_title(); ?></h4>
 							</a>
 					</div>
-			<?php }
-			/* Restore original Post Data */
-			wp_reset_postdata();
-	} else { ?>
-			<!-- no posts found -->
-			<p>There are no designers</p>
-<?php } ?>
+          <?php }
+          /* Restore original Post Data */
+          wp_reset_postdata();
+          } else { ?>
+          <!-- no posts found -->
+          <p>There are no designers</p>
+          <?php } ?>
+      </div>
 </section>
 
 <section>
