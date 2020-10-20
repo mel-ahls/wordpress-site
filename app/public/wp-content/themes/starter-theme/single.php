@@ -1,46 +1,28 @@
 <?php get_header(); ?>
+
 <div class="wrapper">
+
   <div class="content">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-          <?php the_post_thumbnail('landscape'); ?>
-            <p><?php the_title(); ?></p>
-            <p><?php the_author(); ?></p>
-            <p><?php the_excerpt(); ?></p>
-            <p><?php the_category(); ?></p>
-
-        <div class="entry-meta">
-          <?php base_theme_posted_on(); ?>
-        </div><!-- .entry-meta -->
-
-        <div class="entry-content">
-          <?php the_content(); ?>
-          <?php wp_link_pages(array(
-            'before' => '<div class="page-link"> Pages: ',
-            'after' => '</div>'
-          )); ?>
-        </div><!-- .entry-content -->
-
-        <div class="entry-utility">
-          <?php base_theme_posted_in(); ?>
-          <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-        </div><!-- .entry-utility -->
-      </div><!-- #post-## -->
-
-      <div id="nav-below" class="navigation">
-        <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-        <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-      </div><!-- #nav-below -->
-
-      <?php comments_template( '', true ); ?>
+    <section>
+      <div class="post-hero">
+        <div class="post-info" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <p><?php the_category(); ?></p>
+          <h1><?php the_title(); ?></h1>
+          <h2>By: <?php echo get_the_author(); ?></h2>
+        </div>
+        <div class="post-img">
+          <?php the_post_thumbnail('full'); ?>
+        </div>
+      </div>
+      <div class="post-text background">
+        <?php the_content(); ?>
+      </div>
+    </section>
 
     <?php endwhile; // end of the loop. ?>
-
-  </div> <!-- /.content -->
-
-  <?php get_sidebar(); ?>
+  </div>
 
 </div>
 
