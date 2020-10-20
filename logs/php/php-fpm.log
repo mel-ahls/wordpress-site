@@ -14,3 +14,7 @@
 [01-Oct-2020 17:01:04] NOTICE: exiting, bye-bye!
 [01-Oct-2020 18:47:06] NOTICE: fpm is running, pid 61171
 [01-Oct-2020 18:47:06] NOTICE: ready to handle connections
+[20-Oct-2020 13:37:33] WARNING: [pool www] child 61180 said into stderr: "libpng warning: Interlace handling should be turned on when using png_read_image"
+[20-Oct-2020 13:37:37] WARNING: [pool www] child 61180 said into stderr: "libpng warning: Interlace handling should be turned on when using png_read_image"
+[20-Oct-2020 13:37:43] WARNING: [pool www] child 61179 said into stderr: "libpng warning: Interlace handling should be turned on when using png_read_image"
+[20-Oct-2020 13:37:47] WARNING: [pool www] child 61180 said into stderr: "libpng warning: Interlace handling should be turned on when using png_read_image"

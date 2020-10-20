@@ -15,16 +15,17 @@
     </div>
   </div>
   
+  <div class="dropdown">
+    <form action="<?php echo esc_url( home_url( '/' ) ); ?>"  method="get">
+      <?php wp_dropdown_categories(); ?>
+      <input type="submit" name="submit" value="Go" />
+    </form>
+  </div>
 
-  <form action="<?php echo esc_url( home_url( '/' ) ); ?>"  method="get">
-    <?php wp_dropdown_categories(); ?>
-    <input type="submit" name="submit" value="Go" />
-  </form>
-
-  <div class="content">
+  <div class="blog-content">
        <?php get_template_part( 'loop', 'index' ); ?>
   </div>
 
-</div> 
+</div>
 
 <?php get_footer(); ?>
